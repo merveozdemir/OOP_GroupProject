@@ -4,16 +4,12 @@ public abstract class Calisan {
     private String calistigiFirma;
     private float maas;
     private byte calistigiYilSayisi;
-
-
-
-    abstract void isYap();
-     float maasHesapla(){
-         return getAsgariUcret()*getCalistigiYilSayisi();
-
-     }
-
     abstract float getAsgariUcret();
+    abstract void isYap();
+
+    protected float maasHesapla(){
+         return getAsgariUcret()*getCalistigiYilSayisi();
+     }
 
     public String getCalistigiFirma() {
         return calistigiFirma;
@@ -31,7 +27,6 @@ public abstract class Calisan {
         this.maas = maas;
     }
 
-
     public byte getCalistigiYilSayisi() {
         return calistigiYilSayisi;
     }
@@ -39,7 +34,4 @@ public abstract class Calisan {
     public void setCalistigiYilSayisi(byte calistigiYilSayisi) {
         this.calistigiYilSayisi = calistigiYilSayisi;
     }
-
-
-
 }
