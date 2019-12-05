@@ -1,16 +1,15 @@
 package com.uniyaz;
 
-public class Muhendis extends Calisan implements OfisteCalisabilme{
+public class Muhendis extends Calisan implements OfisteCalisma {
 
+
+    public Muhendis(String isim, String soyisim) {
+        super(isim, soyisim);
+    }
 
     @Override
     void isYap() {
         System.out.println("");
-    }
-
-    @Override
-    float maasHesapla() {
-        return 0;
     }
 
     @Override

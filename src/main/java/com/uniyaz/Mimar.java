@@ -1,6 +1,10 @@
 package com.uniyaz;
 
-public class Mimar extends Calisan implements OfisteCalisabilme{
+public class Mimar extends Calisan implements OfisteCalisma {
+
+    public Mimar(String isim, String soyisim) {
+        super(isim, soyisim);
+    }
 
     @Override
     public String getCalistigiFirma() {
@@ -31,13 +35,6 @@ public class Mimar extends Calisan implements OfisteCalisabilme{
     void isYap() {
         System.out.println("Evin Mimari Deseni Çizildi");
     }
-/*
-    @Override
-    float maasHesapla() {
-        float ucret =getAsgariUcret()*getCalistigiYilSayisi();
-        this.setMaas(ucret);
-        return ucret;
-    }*/
 
     @Override
     public void ofisteCalis() {

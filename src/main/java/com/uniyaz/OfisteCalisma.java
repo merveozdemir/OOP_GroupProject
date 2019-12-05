@@ -1,5 +1,5 @@
 package com.uniyaz;
 
-public interface OfisteCalisabilme {
+public interface OfisteCalisma {
     void ofisteCalis();
 }

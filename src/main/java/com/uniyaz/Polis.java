@@ -3,6 +3,9 @@ package com.uniyaz;
 public class Polis extends Calisan {
 
 
+    public Polis(String isim, String soyisim) {
+        super(isim, soyisim);
+    }
 
     @Override
     void isYap() {
@@ -10,15 +13,8 @@ public class Polis extends Calisan {
     }
 
     @Override
-    float maasHesapla() {
-        float ucret = getAsgariUcret()*getCalistigiYilSayisi();
-        this.setMaas(ucret);
-        return ucret;
-    }
-
-    @Override
     float getAsgariUcret() {
-        return 1000;
+        return 2000;
     }
 
 
