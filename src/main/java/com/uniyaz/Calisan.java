@@ -3,11 +3,17 @@ package com.uniyaz;
 public abstract class Calisan {
     private String calistigiFirma;
     private float maas;
-    private byte haftalikCalismaSaati;
+    private byte calistigiYilSayisi;
+
 
 
     abstract void isYap();
-    abstract float maasHesapla();
+     float maasHesapla(){
+         return getAsgariUcret()*getCalistigiYilSayisi();
+
+     }
+
+    abstract float getAsgariUcret();
 
     public String getCalistigiFirma() {
         return calistigiFirma;
@@ -25,11 +31,15 @@ public abstract class Calisan {
         this.maas = maas;
     }
 
-    public byte getHaftalikCalismaSaati() {
-        return haftalikCalismaSaati;
+
+    public byte getCalistigiYilSayisi() {
+        return calistigiYilSayisi;
     }
 
-    public void setHaftalikCalismaSaati(byte haftalikCalismaSaati) {
-        this.haftalikCalismaSaati = haftalikCalismaSaati;
+    public void setCalistigiYilSayisi(byte calistigiYilSayisi) {
+        this.calistigiYilSayisi = calistigiYilSayisi;
     }
+
+
+
 }
