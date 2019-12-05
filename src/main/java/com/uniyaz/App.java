@@ -15,17 +15,18 @@ public class App
         //Kaan
         ArrayList<Mimar> Mimarlar = new ArrayList<>();
 
+
         Mimar calisan=new Mimar("Fırat", "Ulgay");
         calisan.setCalistigiFirma("Universal");
       //  calisan.setMaas(2600);
-        calisan.setCalistigiYilSayisi((byte)4);
+        calisan.setCalistigiYilSayisi((byte) 4);
 
         Mimarlar.add(calisan);
 
         Mimar calisan2=new Mimar("Kaan", "Binat");
         calisan2.setCalistigiFirma("Akinon");
       //  calisan2.setMaas(3400);
-        calisan2.setCalistigiYilSayisi((byte)7);
+        calisan2.setCalistigiYilSayisi((byte) 7);
 
         Mimarlar.add(calisan2);
 
@@ -49,22 +50,36 @@ public class App
         polis1.setCalistigiYilSayisi((byte)5);
 
         Doktor doktor1 = new Doktor("Elif", "Çare");
-        doktor1.setCalistigiYilSayisi((byte)1);
+        doktor1.setCalistigiYilSayisi((byte) 1);
 
         calisanList.add(muhendis1);
         calisanList.add(muhendis2);
         calisanList.add(polis1);
         calisanList.add(doktor1);
 
-        getCalisanMaaslari(calisanList);
 
+
+        //FIRAT
+
+        Doktor doktor2 = new Doktor("Murat","Soyaslan");
+        doktor2.setCalistigiYilSayisi((byte) 5);
+        doktor2.setCalistigiFirma("Medical Park");
+
+        Mimar mimar1 = new Mimar("Emin","Şahin");
+        mimar1.setCalistigiYilSayisi((byte) 2);
+        mimar1.setCalistigiFirma("Diba İnşaat");
+
+        calisanList.add(mimar1);
+        calisanList.add(doktor2);
+
+        getCalisanMaaslari(calisanList);
     }
 
         static void getCalisanMaaslari(List<Calisan> calisanList){
-            System.out.println("-------Çalışanların maaşlarını listele-------");
+            System.out.println("-------Çalışanların maaş listesi-------");
             for (Calisan calisan: calisanList) {
                 calisan.maasHesapla();
-                System.out.println(calisan.getIsim()+ " " + calisan.getSoyisim()+ ":  "+ calisan.getMaas());
+                System.out.println(calisan.getIsim() + " "  + calisan.getSoyisim() + ":  " + calisan.getMaas()+" "+ calisan.getMeslekAdi());
             }
 
         }

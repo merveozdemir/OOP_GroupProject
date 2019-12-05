@@ -2,6 +2,11 @@ package com.uniyaz;
 
 public class Mimar extends Calisan implements OfisteCalisma {
 
+    @Override
+    public String getMeslekAdi() {
+        return "(Mimar)";
+    }
+
     public Mimar(String isim, String soyisim) {
         super(isim, soyisim);
     }

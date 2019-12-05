@@ -8,6 +8,9 @@ public abstract class Calisan {
     private float maas;
     private byte calistigiYilSayisi;
     private int idCounter;
+    private String meslekAdi;
+
+
 
     public Calisan(String isim, String soyisim) {
         this.isim = isim;
@@ -16,7 +19,6 @@ public abstract class Calisan {
         this.calisanId = idCounter;
     }
 
-    abstract float getAsgariUcret();
     abstract void isYap();
 
     protected float maasHesapla(){
@@ -24,12 +26,17 @@ public abstract class Calisan {
         return maas;
      }
 
+    abstract float getAsgariUcret();
     public String getIsim() {
         return isim;
     }
 
     public void setIsim(String isim) {
         this.isim = isim;
+    }
+
+    public String getMeslekAdi() {
+        return meslekAdi;
     }
 
     public String getSoyisim() {

@@ -1,7 +1,10 @@
 package com.uniyaz;
 
 public class Doktor extends Calisan implements OfisteCalisma {
-
+    @Override
+    public String getMeslekAdi() {
+        return "(Doktor)";
+    }
 
     public Doktor(String isim, String soyisim) {
         super(isim, soyisim);
@@ -20,6 +23,6 @@ public class Doktor extends Calisan implements OfisteCalisma {
 
     @Override
     public void ofisteCalis() {
-        System.out.println("doktor ofiste çalışır");
+        System.out.println("doktor ofiste çalıştı");
     }
 }
