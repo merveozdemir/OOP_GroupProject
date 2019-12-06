@@ -1,6 +1,6 @@
 package com.uniyaz;
 
-public class Doktor extends Calisan implements OfisteCalisma {
+public class Doktor extends Calisan implements OfisteCalisabilir {
     @Override
     public String getMeslekAdi() {
         return "(Doktor)";
@@ -8,6 +8,11 @@ public class Doktor extends Calisan implements OfisteCalisma {
 
     public Doktor(String isim, String soyisim) {
         super(isim, soyisim);
+    }
+
+    @Override
+    boolean getImzaYetkisi() {
+        return false;
     }
 
     @Override

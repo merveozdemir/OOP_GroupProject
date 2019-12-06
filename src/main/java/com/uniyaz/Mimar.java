@@ -1,6 +1,6 @@
 package com.uniyaz;
 
-public class Mimar extends Calisan implements OfisteCalisma {
+public class Mimar extends Calisan implements OfisteCalisabilir,SahadaCalisabilir{
 
     @Override
     public String getMeslekAdi() {
@@ -9,6 +9,11 @@ public class Mimar extends Calisan implements OfisteCalisma {
 
     public Mimar(String isim, String soyisim) {
         super(isim, soyisim);
+    }
+
+    @Override
+    boolean getImzaYetkisi() {
+        return true;
     }
 
     @Override
@@ -54,5 +59,10 @@ public class Mimar extends Calisan implements OfisteCalisma {
     @Override
     public byte getCalistigiYilSayisi() {
         return super.getCalistigiYilSayisi();
+    }
+
+    @Override
+    public void SahadaCalis() {
+        System.out.println("Şantiye yönetildi");
     }
 }

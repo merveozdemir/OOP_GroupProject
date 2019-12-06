@@ -59,6 +59,7 @@ public class App
 
 
 
+
         //FIRAT
 
         Doktor doktor2 = new Doktor("Murat","Soyaslan");
@@ -73,6 +74,17 @@ public class App
         calisanList.add(doktor2);
 
         getCalisanMaaslari(calisanList);
+
+        //DİLARA
+
+        Muhendis muhendis=new InsaatMuhendisi("Dilara","Eşkin");
+        muhendis.setCalistigiYilSayisi((byte)8);
+        muhendis.setCalistigiFirma("Cengiz İnşaat");
+
+        calisanList.add(muhendis);
+        getImzaYetkileri(calisanList);
+        getCalisanMaaslari(calisanList);
+
     }
 
         static void getCalisanMaaslari(List<Calisan> calisanList){
@@ -80,6 +92,14 @@ public class App
             for (Calisan calisan: calisanList) {
                 calisan.maasHesapla();
                 System.out.println(calisan.getIsim() + " "  + calisan.getSoyisim() + ":  " + calisan.getMaas()+" "+ calisan.getMeslekAdi());
+            }
+
+        }
+        static void getImzaYetkileri(List<Calisan> calisanList){
+            System.out.println("-------Çalışanların imza yetki listesi-------");
+            for (Calisan calisan: calisanList) {
+                calisan.getImzaYetkisi();
+                System.out.println(calisan.getIsim() + " "  + calisan.getSoyisim() + ": "+" İmza Yetkisi(" + calisan.getImzaYetkisi()+" )"+""+ calisan.getMeslekAdi());
             }
 
         }

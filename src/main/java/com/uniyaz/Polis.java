@@ -1,18 +1,19 @@
 package com.uniyaz;
 
-public class Polis extends Calisan {
-    @Override
-    public String getMeslekAdi() {
-        return "(Polis)";
-    }
+public class Polis extends Calisan implements OfisteCalisabilir,SahadaCalisabilir{
 
     public Polis(String isim, String soyisim) {
         super(isim, soyisim);
     }
 
     @Override
-    void isYap() {
+    boolean getImzaYetkisi() {
+        return false;
+    }
 
+    @Override
+    void isYap() {
+        System.out.println("Huzur ve güven ortamı sağlandı");
     }
 
     @Override
@@ -21,4 +22,16 @@ public class Polis extends Calisan {
     }
 
 
+    @Override
+    public void ofisteCalis() {
+
+        System.out.println("Ofiste Çalışıyor");
+
+    }
+
+    @Override
+    public void SahadaCalis() {
+
+        System.out.println("Suçlular yakalandı");
+    }
 }

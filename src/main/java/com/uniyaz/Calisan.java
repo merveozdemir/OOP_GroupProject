@@ -18,6 +18,11 @@ public abstract class Calisan {
         idCounter++;
         this.calisanId = idCounter;
     }
+    boolean imzaYeklisiKontrol(){
+        return getImzaYetkisi();
+    }
+
+    abstract  boolean getImzaYetkisi();
 
     abstract void isYap();
 

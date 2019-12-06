@@ -1,8 +1,6 @@
 package com.uniyaz;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
-public class InsaatIscisi extends Calisan implements SantiyedeCalisma {
+public class InsaatIscisi extends Calisan implements SahadaCalisabilir {
 
     @Override
     public String getMeslekAdi() {
@@ -11,6 +9,11 @@ public class InsaatIscisi extends Calisan implements SantiyedeCalisma {
 
     public InsaatIscisi(String isim, String soyisim) {
         super(isim, soyisim);
+    }
+
+    @Override
+    boolean getImzaYetkisi() {
+        return false;
     }
 
     @Override
@@ -24,7 +27,7 @@ public class InsaatIscisi extends Calisan implements SantiyedeCalisma {
     }
 
     @Override
-    public void santiyedeCalis() {
+    public void SahadaCalis() {
         System.out.println("Şantiyede çalıştı.");
     }
 }
